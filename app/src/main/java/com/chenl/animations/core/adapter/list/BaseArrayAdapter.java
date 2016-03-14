@@ -1,8 +1,6 @@
 package com.chenl.animations.core.adapter.list;
 
 import android.support.annotation.NonNull;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;

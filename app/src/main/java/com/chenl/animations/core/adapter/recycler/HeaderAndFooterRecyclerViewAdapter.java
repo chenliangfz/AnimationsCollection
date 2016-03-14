@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class HeaderAndFooterRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private static final int TYPE_HEADER_VIEW = Integer.MIN_VALUE;
-    private static final int TYPE_FOOTER_VIEW = Integer.MIN_VALUE + 1;
+    private static final int TYPE_HEADER_VIEW = Integer.MAX_VALUE;
+    private static final int TYPE_FOOTER_VIEW = Integer.MIN_VALUE;
 
     /**
      * RecyclerView使用的，真正的Adapter

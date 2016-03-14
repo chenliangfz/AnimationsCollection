@@ -1,13 +1,20 @@
 package com.chenl.animations;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+import com.chenl.animations.core.BaseActivity;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+
+
+@EActivity(R.layout.activity_main)
+public class MainActivity extends BaseActivity {
+    @ViewById(R.id.list)
+    ListView mListView;
+
+    @AfterViews
+    void afterViews(){
     }
 }
