@@ -23,5 +23,8 @@ public class HomeItemHolder extends FrameLayout {
         super(context);
     }
 
+    public void bindView(String value){
+        mTxtTitle.setText(value);
+    }
 
 }
