@@ -1,6 +1,7 @@
 package com.chenl.animations;
 
 import android.content.Context;
+import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 
 import com.chenl.animations.core.BaseActivity;
@@ -13,6 +14,10 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends BaseActivity {
@@ -21,11 +26,28 @@ public class MainActivity extends BaseActivity {
 
     HomeAdapter mAdapter;
 
+    @ViewById(R.id.tool_bar)
+    Toolbar mToolbar;
+
     @AfterViews
     void afterViews(){
+        setSupportActionBar(mToolbar);
         mAdapter = new HomeAdapter();
         mListView.setAdapter(mAdapter);
-        mAdapter.addAll(Mocks.homeModles);
+        mAdapter.addAll(createHomeModles());
+    }
+
+    private final List<HomeModle> createHomeModles() {
+        final List<HomeModle> homeModles = new ArrayList<>();
+        HomeModle homeModle = new HomeModle();
+        homeModle.title = "ViewPager";
+        homeModles.add(homeModle);
+        for (int i = 0; i < 20; i++) {
+            HomeModle modle = new HomeModle();
+            modle.title = "Title:"+i;
+            homeModles.add(modle);
+        }
+        return homeModles;
     }
 
     private class HomeAdapter extends ViewArrayAdapter<HomeModle,HomeItemHolder>{

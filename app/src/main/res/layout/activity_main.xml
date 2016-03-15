@@ -2,9 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/container">
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:background="?colorPrimaryDark"
+        android:layout_height="?actionBarSize"/>
 
     <include
+        android:id="@+id/container"
+        android:layout_below="@+id/tool_bar"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
         layout="@layout/layout_list"/>
 </RelativeLayout>

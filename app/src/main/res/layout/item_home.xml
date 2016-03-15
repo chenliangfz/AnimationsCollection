@@ -11,6 +11,6 @@
         android:textColor="?colorPrimaryDark"
         tools:text="Title"
         android:textSize="@dimen/text_size_large"
-        android:padding="@dimen/padding_medium"/>
+        android:padding="@dimen/padding_extra_large"/>
 
 </LinearLayout>
