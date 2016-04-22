@@ -30,7 +30,7 @@ apt {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile "com.android.support:appcompat-v7:$SupportVersion"
     compile "com.android.support:recyclerview-v7:$SupportVersion"
     //动画兼容包

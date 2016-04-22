@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <android.support.v7.widget.Toolbar
+        xmlns:toolbar="http://schemas.android.com/apk/res-auto"
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
         android:background="?colorPrimaryDark"
-        android:layout_height="?actionBarSize"/>
+        toolbar:contentInsetStart="0dp"
+        toolbar:contentInsetLeft="0dp"
+        toolbar:contentInsetEnd="0dp"
+        toolbar:contentInsetRight="0dp"
+        android:translationZ="2dp"
+        android:elevation="1dp">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_large"
+            android:layout_gravity="center"/>
+    </android.support.v7.widget.Toolbar>
 
-    <include
+
+    <FrameLayout
         android:id="@+id/container"
-        android:layout_below="@+id/tool_bar"
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        layout="@layout/layout_list"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar" >
+        <fragment
+            android:tag="HomeFragment"
+            android:name="com.chenl.animations.fragments.HomeFragment_"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        </FrameLayout>
 </RelativeLayout>

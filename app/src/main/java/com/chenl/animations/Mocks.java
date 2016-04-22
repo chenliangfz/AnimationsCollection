@@ -1,6 +1,6 @@
 package com.chenl.animations;
 
-import com.chenl.animations.modles.HomeModle;
+import com.chenl.animations.modles.HomeModel;
 
 import java.util.ArrayList;
 
@@ -8,13 +8,13 @@ import java.util.ArrayList;
  * Created by Chen,L on 2016/3/14.
  */
 public class Mocks {
-    public static ArrayList<HomeModle> homeModles;
+    public static ArrayList<HomeModel> homeModels;
     static {
-        homeModles = new ArrayList<>();
+        homeModels = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            HomeModle homeModle = new HomeModle();
-            homeModle.title = "Title:"+i;
-            homeModles.add(homeModle);
+            HomeModel homeModel = new HomeModel();
+            homeModel.title = "Title:"+i;
+            homeModels.add(homeModel);
         }
     }
 }
